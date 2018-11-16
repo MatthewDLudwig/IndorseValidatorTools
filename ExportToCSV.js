@@ -10,7 +10,7 @@ let makeCSV = function(arr) {
 		csv += arr.join(",") + "\r\n";
 	});
 	return csv;
-}
+};
 
 let makeArray = function(name) {
 	let it = document.getElementById(name);
@@ -38,4 +38,10 @@ let makeArray = function(name) {
 	}
 
 	return result;
-}
+};
+
+let makeExcel = function(name) {
+	let arr = makeArray(name);
+	let csv = makeCSV(arr);
+	downloadCSV(csv);
+};
